@@ -3,6 +3,7 @@ import 'package:projectprofilvian/pages/about_page.dart';
 import 'package:projectprofilvian/pages/contact_page.dart';
 import 'package:projectprofilvian/pages/gallery_page.dart';
 import 'package:projectprofilvian/pages/tech_stack_page.dart';
+import 'package:projectprofilvian/pages/testimoni_page.dart';
 import 'layanan_page.dart';
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -148,6 +149,27 @@ class MainPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
+
+            // Tombol Testimoni
+            SizedBox(
+              width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TestimoniPage(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.rate_review),
+                  label: const Text("Testimonial"),
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       ),
